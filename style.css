@@ -122,27 +122,24 @@ button {
 	background-color: var(--color-primary);
 }
 
-/* logo */
+/* Logo */
 .container-logo {
 	width: 50px
 }
 
-.logo-icon {
-	object-fit: contain;
-}
-
-/* navigation */
-.nav-bar {
-	display: block;
-	position: absolute;
-	top: 70px;
-	left: 0;
-	width: 100%;
+/* Navigation */
+.nav-bar.active {
+	display: none;
 	transition: display 5s ease;
 }
 
-.nav-bar.active {
-	display: none;
+.nav-bar {
+	display: block;
+	position: absolute;
+	z-index: 3;
+	top: 70px;
+	left: 0;
+	width: 100%;
 }
 
 .nav-bar ul {
@@ -211,6 +208,31 @@ button {
 	main {
 		margin-bottom: var(--spacing-4xl);
 	}
+
+	/* Logo */
+	.container-logo {
+		width: 55px;
+	}
+
+	/* Navigation */
+	.nav-bar {
+		top: 75px;
+	}
+
+	.nav-bar a {
+		padding: var(--spacing-sm) var(--spacing-lg)
+	}
+
+	/* Button header */
+	.btn-hamburger {
+		font-size: var(--font-2xl);
+	}
+
+	.btn-close {
+		font-size: var(--font-base);
+		width: 32px;
+		height: 32px;
+	}
 }
 
 /* Pc */
@@ -233,6 +255,46 @@ button {
 
 	main {
 		margin-bottom: var(--spacing-5xl);
+	}
+
+	/* Header */
+	.header {
+		position: sticky;
+		top: 0;
+	}
+
+	/* Navigation */
+	.nav-bar,
+	.nav-bar.active
+	 {
+		position: static;
+		display: block;
+		top:auto;
+		z-index: auto;
+		left: auto;
+		width: auto;
+	}
+
+	.nav-bar ul {
+		display: flex;
+	}
+
+	.nav-bar a,
+	.nav-bar li:first-child a {
+		padding: var(--spacing-xs) var(--spacing-lg);
+		border: none;
+		background-color: inherit;
+		transition: color 0.4s;
+	}
+
+	.nav-bar a:hover,
+	.nav-bar li:first-child a:hover {
+		background-color: transparent;
+		color: var(--color-accent-primary);
+	}
+
+	.header-btn {
+		display: none;
 	}
 }
 
