@@ -3,6 +3,11 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+		/>
+		<link rel="stylesheet" href="https://cloudflare.com" />
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
@@ -13,6 +18,48 @@
 		<title>Sape & Lumière</title>
 	</head>
 	<body>
+		<!-- Header et navigation -->
+		<header class="header">
+			<!-- logo festival-->
+			<div class="container-logo">
+				<img
+					class="logo-icon"
+					src="https://res.cloudinary.com/dbm4cyzrb/image/upload/v1787124269/logo_sans_tipo_blanc-removebg-preview_a6uevj.png"
+					alt="logo du festival"
+				/>
+			</div>
+			<!-- Navigation -->
+			<nav id="nav-bar" class="nav-bar active">
+				<ul>
+					<li><a href="#accueil">Accueil</a></li>
+					<li><a href="#programme">Programme</a></li>
+					<li><a href="#line-up">Line-Up</a></li>
+					<li><a href="#billeterie">Billeterie</a></li>
+					<li><a href="#partenaires">Partenaires</a></li>
+					<li><a href="#faq">FAQ</a></li>
+					<li><a href="#contact">Contact</a></li>
+				</ul>
+			</nav>
+			<!-- Bouton header -->
+			<div class="header-btn">
+				<button id="btn-hamburger" class="btn-hamburger" type="button"><i class="fa-solid fa-bars"></i></button>
+				<button id="btn-close" class="btn-close" type="button"><i class="fa-solid fa-x"></i></button>
+			</div>
+		</header>
+		<!-- Hero section -->
+		<section id="accueil"></section>
+		<!-- Main -->
+		<main>
+			<section id="programme"></section>
+			<section id="line-up"></section>
+			<section id="billeterie"></section>
+			<section id="partenaires"></section>
+			<section id="faq"></section>
+			<section id="contact"></section>
+		</main>
+
+		<!-- Footer -->
+		<footer></footer>
 		<!-- Ajout du script JavaScript -->
 		<script src="app.js"></script>
 	</body>
