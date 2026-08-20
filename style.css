@@ -225,7 +225,7 @@ ul {
 .btn-close {
 	display: none;
 	border: none;
-	font-size: var(--font-md);
+	font-size: var(--font-base);
 	color: var(--color-muted-dark);
 	background-color: var(--color-muted-light);
 	width: 30px;
@@ -388,7 +388,7 @@ ul {
 
 /* Bouton de filtre */
 .btn-programme {
-	font-size: var(--font-sm);
+	font-size: var(--font-base);
 	padding: 0.4em 1em;
 	border-radius: 20px;
 	border-radius: 0;
@@ -430,7 +430,7 @@ ul {
 }
 
 .jour-heure {
-	font-size: var(--font-sm);
+	font-size: var(--font-base);
 	color: var(--color-muted-dark);
 	font-weight: var(--font-medium);
 }
@@ -453,11 +453,11 @@ ul {
 }
 
 .activite-title {
-	font-size: var(--font-base);
+	font-size: var(--font-lg);
 }
 
 .activite-time {
-	font-size: var(--font-sm);
+	font-size: var(--font-base);
 	font-family: var(--font-quaternary);
 	font-weight: var(--font-black);
 	letter-spacing: 2px;
@@ -469,12 +469,13 @@ ul {
 }
 
 .activite-description {
-	font-size: var(--font-sm);
+	font-size: var(--font-base);
 }
 
 /* Billeterie */
 .billeterie,
-.programme {
+.programme,
+.faq {
 	display: flex;
 	flex-direction: column;
 	gap: var(--spacing-lg);
@@ -497,11 +498,11 @@ ul {
 }
 
 /* Pass */
-.section-pass {
+.section-pass,
+.faq-section {
 	display: flex;
 	flex-direction: column;
 	gap: var(--spacing-md);
-	align-items: center;
 }
 
 .pass {
@@ -520,18 +521,14 @@ ul {
 		background-color 0.4s;
 }
 
-.pass.pass-3:hover {
-	transform: scale(1.05);
-	background-color: var(--color-primary);
-	box-shadow: 0px 1px 2px var(--color-muted-light);
-}
-
 .pass.pass-1 {
 	border: 1px solid var(--color-muted-dark);
 	transition: transform 0.4s;
 }
 
-.pass.pass-1:hover {
+.pass.pass-1:hover,
+.pass.pass-3:hover,
+.question-reponse:hover {
 	box-shadow: 0px 1px 2px var(--color-muted-light);
 	border: 1px solid var(--color-muted-light);
 	transform: scale(1.03);
@@ -555,7 +552,7 @@ ul {
 
 .pass-description {
 	text-align: justify;
-	font-size: var(--font-sm);
+	font-size: var(--font-base);
 	line-height: 1.3;
 	font-weight: var(--font-medium);
 }
@@ -564,7 +561,7 @@ ul {
 	display: flex;
 	flex-direction: column;
 	gap: var(--spacing-xs);
-	font-size: var(--font-sm);
+	font-size: var(--font-base);
 }
 
 .pass-detail-item {
@@ -578,7 +575,7 @@ ul {
 }
 
 .btn-reserver {
-	font-size: var(--font-sm);
+	font-size: var(--font-base);
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -588,6 +585,51 @@ ul {
 
 .btn-reserver i {
 	font-weight: var(--font-black);
+}
+
+/* Faq */
+.question-reponse {
+	display: flex;
+	flex-direction: column;
+	gap: var(--spacing-md);
+	padding: var(--spacing-md);
+	box-shadow: 1px 1px 5px var(--color-muted-light);
+	border-radius: 20px;
+	transition:
+		transform 0.4s,
+		background-color 0.4s;
+}
+
+.container-question {
+	display: flex;
+	justify-content: space-between;
+}
+
+.question {
+	width: 80%;
+	max-width: 320px;
+	font-size: var(--font-base);
+	line-height: 1.3;
+}
+
+.btn-up,
+.btn-down {
+	border: none;
+	font-size: var(--font-base);
+	color: var(--color-muted-dark);
+	background-color: var(--color-muted-light);
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+}
+
+.btn-up {
+	display: none;
+}
+
+.reponse {
+	display: none;
+	line-height: 1.3;
 }
 
 /* Footer */
@@ -839,7 +881,8 @@ ul {
 
 	/* Billeterie */
 	.billeterie,
-	.programme {
+	.programme,
+	.faq {
 		gap: var(--spacing-xl);
 	}
 
@@ -878,6 +921,17 @@ ul {
 		margin-top: auto;
 	}
 
+	/* Faq */
+	.faq-section {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.question {
+		font-size: var(--font-lg);
+	}
+
+	/* Footer */
 	.footer {
 		padding-top: var(--spacing-4xl);
 		padding-bottom: var(--spacing-lg);
@@ -997,7 +1051,9 @@ ul {
 	}
 
 	/* Billeterie */
-	.billeterie {
+	.billeterie,
+	.programme,
+	.faq {
 		gap: var(--spacing-3xl);
 	}
 	.subtilte-description {
@@ -1010,6 +1066,12 @@ ul {
 
 	.pass {
 		gap: var(--spacing-xl);
+	}
+
+	/* Faq */
+	.faq-section {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
 	}
 
 	/* Footer */
