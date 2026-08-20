@@ -13,6 +13,16 @@ let dateFestival = "2026-08-21T18:00:00";
 const btnPass1 = document.getElementById('btn-pass-1');
 const btnPass3 = document.getElementById('btn-pass-3');
 
+// Filtrer programme
+// Bouton
+const btnVendredi = document.getElementById('btn-vendredi');
+const btnSamedi = document.getElementById('btn-samedi');
+const btnDimanche = document.getElementById('btn-dimanche');
+// 2ours
+const jour1 = document.getElementById('jour-1')
+const jour2 = document.getElementById('jour-2')
+const jour3 = document.getElementById('jour-3')
+
 // Fonctions
 // Menu hamburger
 const menuHamburger = () => {
@@ -123,13 +133,93 @@ const reserveWA = () => {
 	})
 }
 
+// Choisir jour
+const choisirJour = () => {
+	btnVendredi.addEventListener('click', () => {
+		if (btnVendredi.classList.contains('filtre')) {
+			return;
+		} else {
+			btnVendredi.classList.add('filtre');
+
+			if(btnSamedi.classList.contains('filtre')) {
+				btnSamedi.classList.remove('filtre')
+			}
+			if(btnDimanche.classList.contains('filtre')) {
+				btnDimanche.classList.remove('filtre')
+			}
+		}
+
+		jour1.classList.remove('jour-hidden');
+
+		if(!jour2.classList.contains('jour-hidden')) {
+			jour2.classList.add('jour-hidden')
+		}
+
+		if(!jour3.classList.contains('jour-hidden')) {
+			jour3.classList.add('jour-hidden')
+		}	
+	});
+
+	btnSamedi.addEventListener('click', () => {
+		if (btnSamedi.classList.contains('filtre')) {
+			return;
+		} else {
+			btnSamedi.classList.add('filtre');
+			
+			if(btnVendredi.classList.contains('filtre')) {
+				btnVendredi.classList.remove('filtre')
+			}
+			if(btnDimanche.classList.contains('filtre')) {
+				btnDimanche.classList.remove('filtre')
+			}
+		}
+
+		jour2.classList.remove('jour-hidden');
+
+		if(!jour1.classList.contains('jour-hidden')) {
+			jour1.classList.add('jour-hidden')
+		}
+
+		if(!jour3.classList.contains('jour-hidden')) {
+			jour3.classList.add('jour-hidden')
+		}	
+	});
+
+	btnDimanche.addEventListener('click', () => {
+		if (btnDimanche.classList.contains('filtre')) {
+			return;
+		} else {
+			btnDimanche.classList.add('filtre');
+			
+			if(btnVendredi.classList.contains('filtre')) {
+				btnVendredi.classList.remove('filtre')
+			}
+			if(btnSamedi.classList.contains('filtre')) {
+				btnSamedi.classList.remove('filtre')
+			}
+		}
+
+		jour3.classList.remove('jour-hidden');
+
+		if(!jour1.classList.contains('jour-hidden')) {
+			jour1.classList.add('jour-hidden')
+		}
+
+		if(!jour2.classList.contains('jour-hidden')) {
+			jour2.classList.add('jour-hidden')
+		}	
+	});
+}
+
 // Appel des fonction
 // Menu hamburger
 menuHamburger();
 
 // compte a rebour
 displayTime();
-setInterval(displayTime, 1000)
+setInterval(displayTime, 1000);
 
 // Reserver sur whatsApp
-reserveWA()
+reserveWA();
+
+choisirJour()

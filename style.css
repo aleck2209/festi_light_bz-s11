@@ -236,7 +236,7 @@ ul {
 /* Accueil */
 .accueil {
 	position: relative;
-	min-height: 90vh;
+	min-height: 80vh;
 	background-image: url("https://res.cloudinary.com/dbm4cyzrb/image/upload/v1787124270/ChatGPT_Image_Aug_18_2026_07_48_36_PM_fzlqzp.png");
 	background-position: center;
 	background-repeat: no-repeat;
