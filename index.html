@@ -22,11 +22,12 @@
 		<header class="header">
 			<!-- logo festival-->
 			<div class="container-logo">
-				<a href="#accueil"><img
-					class="logo-icon"
-					src="https://res.cloudinary.com/dbm4cyzrb/image/upload/v1787124269/logo_sans_tipo_blanc-removebg-preview_a6uevj.png"
-					alt="logo du festival"
-				/></a>	
+				<a href="#accueil"
+					><img
+						class="logo-icon"
+						src="https://res.cloudinary.com/dbm4cyzrb/image/upload/v1787124269/logo_sans_tipo_blanc-removebg-preview_a6uevj.png"
+						alt="logo du festival"
+				/></a>
 			</div>
 			<!-- Navigation -->
 			<nav id="nav-bar" class="nav-bar active">
@@ -42,20 +43,33 @@
 			</nav>
 			<!-- Bouton header -->
 			<div class="header-btn">
-				<button id="btn-hamburger" class="btn-hamburger" type="button"><i class="fa-solid fa-bars"></i></button>
-				<button id="btn-close" class="btn-close" type="button"><i class="fa-solid fa-x"></i></button>
+				<button id="btn-hamburger" class="btn-hamburger" type="button">
+					<i class="fa-solid fa-bars"></i>
+				</button>
+				<button id="btn-close" class="btn-close" type="button">
+					<i class="fa-solid fa-x"></i>
+				</button>
 			</div>
 		</header>
 		<!-- Hero section -->
 		<section id="accueil" class="accueil">
 			<section class="intro-accueil">
-				<h1 class="festival-name">Fes<span class="rose">tival</span> Sape & <span class="vert">Lum</span>ière</h1>
-				<p class="date">Vendredi 21 au Dimanche 23
-				</p>
+				<h1 class="festival-name">
+					Fes<span class="rose">tival</span> Sape &
+					<span class="vert">Lum</span>ière
+				</h1>
+				<p class="date">Vendredi 21 au Dimanche 23</p>
 				<section class="description-intro">
-					<p>Trois jours pour célébrer l'éléance, la musique et la lumière au coeur de Brazzavile</p>
-					<p>Une expérience où la Sape et la création congolaise prennent vie.</p>
-					<p class="slogan">Vivez l'énergie - Portez l'élégance - Entrez dans la lumière</p>
+					<p>
+						Trois jours pour célébrer l'éléance, la musique et la lumière au
+						coeur de Brazzavile
+					</p>
+					<p>
+						Une expérience où la Sape et la création congolaise prennent vie.
+					</p>
+					<p class="slogan">
+						Vivez l'énergie - Portez l'élégance - Entrez dans la lumière
+					</p>
 				</section>
 			</section>
 			<section class="compte-rebour">
@@ -64,14 +78,62 @@
 					<p>Chaque seconde compte</p>
 					<a href="#billeterie">Réservez votre pass</a>
 					<div id="chrono" class="chrono"></div>
-				</div>			
+				</div>
 			</section>
 		</section>
 		<!-- Main -->
 		<main>
 			<section id="programme"></section>
 			<section id="line-up"></section>
-			<section id="billeterie"></section>
+
+			<!-- Section billeterie -->
+			<section id="billeterie" class="billeterie">
+				<section class="section-intro">
+					<h2 class="subtilte">Billeterie</h2>
+					<p class="subtilte-description">
+						Choisissez votre pass et vivez trois jours de style, de musique et
+						de lumière à Brazzaville. Réservez directement sur whatsApp
+					</p>
+				</section>
+				<!-- Section pass -->
+				<section class="section-pass">
+					<article class="pass pass-3">
+						<h3 class="pass-title">Pass 3 jours</h3>
+						<p class="pass-price">10.000 FCFA</p>
+						<p class="pass-description">
+							Vivre l'expérience complète du Festival Sape & Lumière.
+						</p>
+						<ul class="pass-detail-list">
+							<li class="pass-detail-item">
+								<i class="fa-solid fa-guitar"></i>Musique live
+							</li>
+							<li class="pass-detail-item">
+								<i class="fa-solid fa-vest-patches"></i>Sape & Mode
+							</li>
+							<li class="pass-detail-item">
+								<i class="fa-regular fa-lightbulb"></i>Art lumière
+							</li>
+							<li class="pass-detail-item">
+								<i class="fa-regular fa-calendar-days"></i>Accès au trois jours
+								du festival
+							</li>
+						</ul>
+						<button type="button" class="btn-reserver">
+							<i class="fa-brands fa-whatsapp"></i>Réserver
+						</button>
+					</article>
+					<article class="pass pass-1">
+						<h3 class="pass-title">Pass 1 jours</h3>
+						<p class="pass-price">5.000 FCFA</p>
+						<p class="pass-description">
+							Découvrir l'ambiance du festival le temps d'une journée.
+						</p>
+						<button type="button" class="btn-reserver">
+							<i class="fa-brands fa-whatsapp"></i>Réserver
+						</button>
+					</article>
+				</section>
+			</section>
 			<section id="partenaires"></section>
 			<section id="faq"></section>
 			<section id="contact"></section>
