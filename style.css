@@ -124,11 +124,13 @@ input {
 button {
 	cursor: pointer;
 	border: 1px solid var(--color-accent-quaternary);
-	background-color: var(--color-primary);
+	background-color: transparent;
 	color: var(--color-accent-quaternary);
 	border-radius: 6px;
 	font-weight: var(--font-medium);
-	transition: transform .4s, background-color .4s;
+	transition:
+		transform 0.4s,
+		background-color 0.4s;
 }
 
 button:hover {
@@ -150,8 +152,6 @@ a:active {
 ul {
 	list-style: none;
 }
-
-
 
 /* Mobile */
 /* Header */
@@ -216,6 +216,7 @@ ul {
 	align-items: center;
 }
 .btn-hamburger {
+	color: var(--color-muted-dark);
 	border: none;
 	background-color: transparent;
 	font-size: var(--font-xl);
@@ -235,7 +236,7 @@ ul {
 /* Accueil */
 .accueil {
 	position: relative;
-	min-height: 70vh;
+	min-height: 90vh;
 	background-image: url("https://res.cloudinary.com/dbm4cyzrb/image/upload/v1787124270/ChatGPT_Image_Aug_18_2026_07_48_36_PM_fzlqzp.png");
 	background-position: center;
 	background-repeat: no-repeat;
@@ -291,7 +292,7 @@ ul {
 	display: none;
 }
 
-/* compte a rebour */
+/* Compte a rebour */
 .compte-rebour {
 	position: relative;
 	z-index: 1;
@@ -303,6 +304,7 @@ ul {
 	border-radius: 5px;
 	gap: var(--spacing-sm);
 	max-width: 320px;
+	margin-top: auto;
 }
 
 .compte-rebour-icon {
@@ -327,16 +329,16 @@ ul {
 .chrono-container > a {
 	font-family: var(--font-secondary);
 	text-decoration: none;
-	color: var(--color-accent-tertiary);
-	border-bottom: 2px solid var(--color-accent-tertiary);
+	color: var(--color-accent-quaternary);
+	border-bottom: 2px solid var(--color-accent-quaternary);
 	transition: color 0.4s;
 	width: fit-content;
 	font-weight: var(--font-medium);
 }
 
 .chrono-container > a:hover {
-	color: var(--color-accent-primary);
-	border-color: var(--color-accent-primary);
+	color: var(--color-accent-tertiary);
+	border-color: var(--color-accent-tertiary);
 }
 
 .chrono {
@@ -368,8 +370,108 @@ ul {
 	font-size: var(--font-sm);
 }
 
+/* Programme */
+.section-header {
+	display: flex;
+	flex-direction: column;
+	gap: var(--spacing-md);
+}
+
+.section-intro-location {
+	color: var(--color-accent-tertiary);
+	font-weight: var(--font-medium);
+}
+
+.section-btn-programme {
+	align-self: center;
+	display: flex;
+	gap: var(--spacing-xs);
+}
+
+/* Bouton de filtre */
+.btn-programme {
+	font-size: var(--font-sm);
+	padding: 0.4em 1em;
+	border-radius: 20px;
+}
+
+.btn-programme.filtre {
+	background-color: var(--color-accent-quaternary);
+	color: var(--color-primary);
+}
+
+/* Jour */
+.container-jour {
+	border-left: 3px solid var(--color-muted-dark);
+	padding-left: var(--spacing-md);
+}
+
+.jour-section.jour-hidden {
+	display: none;
+}
+
+.jour-section {
+	display: flex;
+	flex-direction: column;
+	gap: var(--spacing-sm);
+}
+
+.jour-intro {
+	display: flex;
+	flex-direction: column;
+	gap: var(--spacing-2xs);
+}
+
+.jour {
+	font-size: var(--font-xl);
+}
+
+.jour-heure {
+	font-size: var(--font-sm);
+	color: var(--color-muted-dark);
+	font-weight: var(--font-medium);
+}
+
+.section-activite {
+	display: flex;
+	flex-direction: column;
+	gap: var(--spacing-xs);
+}
+
+.activite {
+	display: flex;
+	flex-direction: column;
+	gap: var(--spacing-xs);
+}
+
+.activite:not(:last-child) {
+	border-bottom: 2px solid var(--color-muted-dark);
+	padding-bottom: var(--spacing-xs);
+}
+
+.activite-title {
+	font-size: var(--font-base);
+}
+
+.activite-time {
+	font-size: var(--font-sm);
+	font-family: var(--font-quaternary);
+	font-weight: var(--font-black);
+	letter-spacing: 2px;
+	color: var(--color-accent-quaternary);
+}
+
+.activite-time i {
+	font-weight: var(--font-black);
+}
+
+.activite-description {
+	font-size: var(--font-sm);
+}
+
 /* Billeterie */
-.billeterie {
+.billeterie,
+.programme {
 	display: flex;
 	flex-direction: column;
 	gap: var(--spacing-lg);
@@ -400,7 +502,6 @@ ul {
 }
 
 .pass {
-	max-width: 275px;
 	padding: var(--spacing-lg);
 	border-radius: 20px;
 	display: flex;
@@ -411,7 +512,9 @@ ul {
 .pass.pass-3 {
 	background-color: var(--color-muted-light);
 	border: 1px solid var(--color-muted-light);
-	transition: transform 0.4s, background-color 0.4s
+	transition:
+		transform 0.4s,
+		background-color 0.4s;
 }
 
 .pass.pass-3:hover {
@@ -444,7 +547,7 @@ ul {
 	font-size: var(--font-2xl);
 	font-weight: var(--font-medium);
 	font-family: var(--font-quaternary);
-	color:var(--color-accent-quaternary)
+	color: var(--color-accent-quaternary);
 }
 
 .pass-description {
@@ -477,7 +580,7 @@ ul {
 	justify-content: center;
 	align-items: center;
 	gap: var(--spacing-2xs);
-	padding: .4rem;
+	padding: 0.4rem;
 }
 
 .btn-reserver i {
@@ -560,8 +663,65 @@ ul {
 		align-self: flex-end;
 	}
 
+	/* Programme */
+	.section-intro-location {
+		font-size: var(--font-lg);
+	}
+
+	.section-btn-programme {
+		align-self: flex-end;
+	}
+
+	/* Bouton de filtre */
+	.btn-programme {
+		font-size: var(--font-base);
+	}
+
+	/* Jour */
+	.container-jour {
+		padding-left: var(--spacing-xl);
+		max-width: 600px;
+	}
+
+	.jour-section {
+		gap: var(--spacing-lg);
+	}
+
+	.jour {
+		font-size: var(--font-2xl);
+	}
+
+	.jour-heure {
+		font-size: var(--font-base);
+	}
+
+	.section-activite {
+		gap: var(--spacing-md);
+	}
+
+	.activite {
+		gap: var(--spacing-sm);
+	}
+
+	.activite:not(:last-child) {
+		padding-bottom: var(--spacing-md);
+	}
+
+	.activite-title {
+		font-size: var(--font-xl);
+	}
+
+	.activite-time {
+		font-size: var(--font-base);
+	}
+
+	.activite-description {
+		font-size: var(--font-base);
+	}
+
 	/* Billeterie */
-	.billeterie {
+	.billeterie,
+	.programme {
 		gap: var(--spacing-xl);
 	}
 
@@ -607,8 +767,8 @@ ul {
 	header,
 	main,
 	footer {
-		padding-right: var(--spacing-xl);
-		padding-left: var(--spacing-xl);
+		padding-right: var(--spacing-5xl);
+		padding-left: var(--spacing-5xl);
 	}
 
 	#accueil {
@@ -660,7 +820,7 @@ ul {
 
 	/* Accueil */
 	.accueil {
-		padding: var(--spacing-2xl);
+		padding: var(--spacing-2xl) var(--spacing-5xl);
 		min-height: 40vh;
 	}
 
@@ -722,8 +882,8 @@ ul {
 	header,
 	main,
 	footer {
-		padding-right: var(--spacing-3xl);
-		padding-left: var(--spacing-3xl);
+		padding-right: var(--spacing-7xl);
+		padding-left: var(--spacing-7xl);
 	}
 
 	#accueil {
@@ -740,7 +900,7 @@ ul {
 
 	/* Accueil */
 	.accueil {
-		padding: var(--spacing-4xl);
+		padding: var(--spacing-7xl);
 		min-height: 40vh;
 	}
 }
