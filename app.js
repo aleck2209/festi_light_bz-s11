@@ -35,8 +35,14 @@ const formContact = document.querySelector(".form-contact");
 const nom = document.getElementById("nom");
 const tel = document.getElementById("tel");
 const message = document.getElementById("message");
-const btnSubmit = formContact.querySelector(".btn-contact");
 const formText = formContact.querySelector(".form-text");
+
+// Line-Up
+const containerArtist = document.getElementById('container-artiste');
+const btnAll = document.getElementById('btn-tous');
+const btnMusique = document.getElementById('btn-musique');
+const btnSapeur = document.getElementById('btn-sapeur');
+const btnlight = document.getElementById('btn-art-lumiere');
 
 // Fonctions
 // Menu hamburger
@@ -326,6 +332,34 @@ const validationFormulaire = () => {
 	});
 };
 
+// Line-Up
+const displayArtist = (artists) => {
+	containerArtist.innerHTML = artists.map(item => 
+		`<article class='artist-card' style="background-image: url('${item.photo}')">
+			<p class="artist-category">${item.category}</p>
+			<p class="artist-name">${item.name}</p>			
+		</article>`
+	).join('');
+
+	const artistCategories = document.querySelectorAll('.artist-category');
+
+	artistCategories.forEach(category => {
+		const content = category.textContent;
+		if (content === 'musique') {
+			category.classList.add('musique');
+		}
+
+		if (content === 'art & lumière') {
+			category.classList.add('art-lumiere');
+		}
+
+		if (content === 'sapeur') {
+			category.classList.add('sapeur');
+		}
+	});
+}
+
+
 // Appel des fonction
 // Menu hamburger
 menuHamburger();
@@ -346,3 +380,6 @@ cacherResponse();
 
 // Validation du formulaire
 validationFormulaire();
+
+// afficher Line-Up
+displayArtist(artists);
