@@ -1,3 +1,4 @@
+import artists from "./data.js";
 // Variables
 // Menu hamburger
 const navBar = document.getElementById("nav-bar");
@@ -343,3 +344,5 @@ cacherResponse();
 
 // Validation du formulaire
 validationFormulaire();
+
+console.log(artists)

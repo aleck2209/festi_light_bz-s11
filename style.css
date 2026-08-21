@@ -685,6 +685,7 @@ ul {
 	color: var(--color-accent-quaternary);
 	background-color: #fce8f8;
 	padding: .6em;
+	border-radius: 6px;
 }
 
 .message-success {
@@ -692,6 +693,7 @@ ul {
 	color: var(--color-accent-tertiary);
 	background-color: #eaf7d6;
 	padding: .6em;
+	border-radius: 6px;
 }
 
 .form-text {
@@ -983,6 +985,18 @@ ul {
 
 	.question {
 		font-size: var(--font-lg);
+	}
+
+	/* contact */
+	/* Formulaire */
+	.form-contact {
+		gap: var(--spacing-lg);
+	}
+
+	.input,
+	.message-error,
+	.message-success {
+		font-size: var(--font-base);
 	}
 
 	/* Footer */
