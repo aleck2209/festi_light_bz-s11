@@ -19,9 +19,13 @@ const btnVendredi = document.getElementById('btn-vendredi');
 const btnSamedi = document.getElementById('btn-samedi');
 const btnDimanche = document.getElementById('btn-dimanche');
 // 2ours
-const jour1 = document.getElementById('jour-1')
-const jour2 = document.getElementById('jour-2')
-const jour3 = document.getElementById('jour-3')
+const jour1 = document.getElementById('jour-1');
+const jour2 = document.getElementById('jour-2');
+const jour3 = document.getElementById('jour-3');
+
+// Afficher la reponse
+const btnDowns = document.querySelectorAll('.btn-down');
+const btnUps = document.querySelectorAll('.btn-up');
 
 // Fonctions
 // Menu hamburger
@@ -211,6 +215,35 @@ const choisirJour = () => {
 	});
 }
 
+// Afficher reponses
+const displayResponse = () => {
+	btnDowns.forEach(btnDown => {
+		btnDown.addEventListener('click', (event) => {
+			const article = event.currentTarget.closest('.question-reponse');
+
+			const reponse = article.querySelector('.reponse');
+			const btnUp = article.querySelector('.btn-up');
+			reponse.style.display = 'block';
+			btnUp.style.display = 'inline';
+			event.currentTarget.style.display = 'none';
+		});
+	});
+}
+
+const cacherResponse = () => {
+	btnUps.forEach(btnUp => {
+		btnUp.addEventListener('click', (event) => {
+			const article = event.currentTarget.closest('.question-reponse');
+
+			const reponse = article.querySelector('.reponse');
+			const btnDown = article.querySelector('.btn-down');
+			reponse.style.display = 'none';
+			btnDown.style.display = 'inline';
+			event.currentTarget.style.display = 'none';
+		});
+	});
+}
+
 // Appel des fonction
 // Menu hamburger
 menuHamburger();
@@ -222,4 +255,9 @@ setInterval(displayTime, 1000);
 // Reserver sur whatsApp
 reserveWA();
 
-choisirJour()
+// Choisir Jour
+choisirJour();
+
+// Afficher reponse;
+displayResponse();
+cacherResponse();
