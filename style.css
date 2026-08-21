@@ -518,6 +518,12 @@ ul {
 	flex-direction: column;
 	justify-content: space-between;
 	overflow: hidden;
+	transition: transform .4s, border-color .4s;
+}
+
+.artist-card:hover {
+	transform: scale(1.01);
+	border: 2px solid var(--color-accent-quaternary);
 }
 
 .artist-card::after {
@@ -537,6 +543,7 @@ ul {
 	z-index: 2;
 	width: fit-content;
 	text-transform: capitalize;
+	font-weight: var(--font-medium);
 }
 
 .musique {
@@ -1022,6 +1029,16 @@ background-color: #fce7f3;
 		font-size: var(--font-base);
 	}
 
+	/* Line-Up */
+	.container-artiste {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.artist-card {
+		height: 350px;
+	}
+
 	/* Billeterie */
 	.billeterie,
 	.programme,
@@ -1206,6 +1223,16 @@ background-color: #fce7f3;
 		grid-template-columns: repeat(4, 1fr);
 	}
 
+	/* Line-Up */
+	.container-artiste {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+	}
+
+	.artist-card {
+		height: 370px;
+	}
+
 	/* Billeterie */
 	.billeterie,
 	.programme,
@@ -1282,5 +1309,15 @@ background-color: #fce7f3;
 	.accueil {
 		padding: var(--spacing-7xl);
 		min-height: 40vh;
+	}
+
+	/* Line-Up */
+	.container-artiste {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+	}
+
+	.artist-card {
+		height: 370px;
 	}
 }
