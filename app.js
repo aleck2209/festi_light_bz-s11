@@ -1,3 +1,5 @@
+// Import
+// Tableau d'artiste
 import artists from "./data.js";
 // Variables
 // Menu hamburger
@@ -344,5 +346,3 @@ cacherResponse();
 
 // Validation du formulaire
 validationFormulaire();
-
-console.log(artists)
