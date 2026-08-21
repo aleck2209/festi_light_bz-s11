@@ -359,6 +359,100 @@ const displayArtist = (artists) => {
 	});
 }
 
+const filtreCategory = (category) => {
+	const artisteCategory = artists.filter(item => item.category === category);
+	displayArtist(artisteCategory);
+}
+
+const handleArtist = () => {
+	displayArtist(artists);
+
+	// clique sur btn tous
+	btnAll.addEventListener('click', () => {
+		displayArtist(artists);
+		if (btnAll.classList.contains("filtre")) {
+			return;
+		} else {
+			btnAll.classList.add("filtre");
+
+			if (btnSapeur.classList.contains("filtre")) {
+				btnSapeur.classList.remove("filtre");
+			}
+			if (btnlight.classList.contains("filtre")) {
+				btnlight.classList.remove("filtre");
+			}
+			if (btnMusique.classList.contains("filtre")) {
+				btnMusique.classList.remove("filtre");
+			}
+		}	
+	});
+
+	// Clique sur btn Musique
+	btnMusique.addEventListener('click', (event) => {
+		const category = event.currentTarget.name
+		filtreCategory(category);
+
+		if (btnMusique.classList.contains("filtre")) {
+			return;
+		} else {
+			btnMusique.classList.add("filtre");
+
+			if (btnSapeur.classList.contains("filtre")) {
+				btnSapeur.classList.remove("filtre");
+			}
+			if (btnlight.classList.contains("filtre")) {
+				btnlight.classList.remove("filtre");
+			}
+			if (btnAll.classList.contains("filtre")) {
+				btnAll.classList.remove("filtre");
+			}
+		}	
+	});
+
+	// Clique sur le btn Sapeur
+	btnSapeur.addEventListener('click', (event) => {
+		const category = event.currentTarget.name
+		filtreCategory(category);
+
+		if (btnSapeur.classList.contains("filtre")) {
+			return;
+		} else {
+			btnSapeur.classList.add("filtre");
+
+			if (btnMusique.classList.contains("filtre")) {
+				btnMusique.classList.remove("filtre");
+			}
+			if (btnlight.classList.contains("filtre")) {
+				btnlight.classList.remove("filtre");
+			}
+			if (btnAll.classList.contains("filtre")) {
+				btnAll.classList.remove("filtre");
+			}
+		}	
+	});
+	// Clique sur Art et lumière
+	btnlight.addEventListener('click', (event) => {
+		const category = event.currentTarget.name
+		filtreCategory(category);
+
+		if (btnlight.classList.contains("filtre")) {
+			return;
+		} else {
+			btnlight.classList.add("filtre");
+
+			if (btnMusique.classList.contains("filtre")) {
+				btnMusique.classList.remove("filtre");
+			}
+			if (btnSapeur.classList.contains("filtre")) {
+				btnSapeur.classList.remove("filtre");
+			}
+			if (btnAll.classList.contains("filtre")) {
+				btnAll.classList.remove("filtre");
+			}
+		}	
+	});
+}
+
 
 // Appel des fonction
 // Menu hamburger
@@ -382,4 +476,4 @@ cacherResponse();
 validationFormulaire();
 
 // afficher Line-Up
-displayArtist(artists);
+handleArtist();
