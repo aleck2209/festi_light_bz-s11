@@ -7,7 +7,7 @@ const navBarLinks = document.querySelectorAll(".nav-bar a");
 
 // Compte a rebour
 const chrono = document.getElementById("chrono");
-let dateFestival = "2026-08-21T18:00:00";
+let dateFestival = "2026-08-21T17:30:00";
 
 // Reserver sur whatsApp
 const btnPass1 = document.getElementById('btn-pass-1');
@@ -26,6 +26,8 @@ const jour3 = document.getElementById('jour-3');
 // Afficher la reponse
 const btnDowns = document.querySelectorAll('.btn-down');
 const btnUps = document.querySelectorAll('.btn-up');
+
+// Validation du formulaire
 
 // Fonctions
 // Menu hamburger
